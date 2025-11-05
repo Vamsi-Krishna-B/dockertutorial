@@ -46,7 +46,7 @@ jobs:
             context: .
             file: ./DockerFile
             push: true 
-            tags: ${{secrets.DOCKER_USERNAME}}/flask-app:latest
+            tags: ${{ secrets.DOCKER_USERNAME }}/flask-app:latest
 
         - name: Image Digest 
           run: echo ${{steps.build-and-publish.outputs.digest}} 
